@@ -12,6 +12,7 @@ import {
 import ErrorBoundary from "@utils/ErrorBoundary";
 import PageNotFound from "@pages/EventPageNotFound";
 import { TransitionWrapper } from "@style/Transition";
+import customTheme from "@style/Theme";
 
 const EventDashboardPage = lazy(() => import("@pages/EventDashboardPage"));
 const EventDetailPage = lazy(() => import("@pages/EventDetailPage"));
@@ -30,7 +31,7 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <UserProvider>
         <CategoryProvider>
-          <ChakraProvider>
+          <ChakraProvider theme={customTheme}>
             <SearchProvider>
               <Router>
                 <Routes>

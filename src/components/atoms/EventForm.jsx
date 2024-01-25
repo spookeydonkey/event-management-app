@@ -1,4 +1,3 @@
-// EventForm.jsx
 import { useState } from "react";
 import {
   FormControl,

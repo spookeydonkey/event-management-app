@@ -59,10 +59,7 @@ const NavBar = () => {
   return (
     <NavBarContainer>
       <NavLink to="/">
-        <Logo
-          w="10rem"
-          // color={["brand.500", "brand.500", "brand.700", "brand.700"]}
-        />
+        <Logo w="10rem" />
       </NavLink>
 
       <Heading
@@ -121,8 +118,8 @@ const MenuLinks = ({
     <Stack
       spacing={8}
       align="center"
-      justify={["center", "space-between", "center", "flex-end"]}
-      direction={["column", "column", "row", "row"]}
+      justify={["center", "center", "center", "flex-end"]}
+      direction={["row", "row", "row", "row"]}
       pt={[4, 4, 0, 0]}
       wrap={"wrap"}
       gap={2}
@@ -135,7 +132,12 @@ const MenuLinks = ({
       <Suspense fallback={<Spinner />}>
         <AddEventModal onEventAdded={refreshEvents} />
       </Suspense>
-      <Box display={{ base: "block", md: "none" }}>
+      <Box
+        display={{ base: "block", md: "none" }}
+        ml={"auto"}
+        mr={"auto"}
+        w={["100%", "75%", "auto", "auto"]}
+      >
         <Filter />
       </Box>
     </Stack>

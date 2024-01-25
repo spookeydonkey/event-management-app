@@ -39,25 +39,18 @@ const EventDashboardPage = () => {
     );
   }, [searchTerm, categoryFilter, events]);
 
-  if (isLoading)
-    return (
-      <Box p={10}>
-        <Spinner
-          speed="0.65s"
-          emptyColor="gray.200"
-          color="blue.500"
-          size="xl"
-        />
-      </Box>
-    );
-  if (error)
+  if (isLoading) {
+    return <SpinnerBox />;
+  }
+  if (error) {
     return (
       <ErrorFallbackUI errorMessage="Error loading events." onRetry={refetch} />
     );
+  }
 
   return (
     <Grid as="section" templateColumns={"auto 7fr"} justifyContent="center">
-      {isLargerThan768 && <Filter as="linker-kolom" />}
+      {isLargerThan768 && <Filter />}
       <HStack
         className="rechter-kolom"
         spacing={4}
@@ -73,12 +66,20 @@ const EventDashboardPage = () => {
             </Link>
           ))
         ) : (
-          <Text p={4}>No events match your criteria.</Text>
+          <NoEventsText />
         )}
       </HStack>
     </Grid>
   );
 };
+
+const SpinnerBox = () => (
+  <Box p={10}>
+    <Spinner speed="0.65s" emptyColor="gray.200" color="blue.500" size="xl" />
+  </Box>
+);
+
+const NoEventsText = () => <Text p={4}>No events match your criteria.</Text>;
 
 export default EventDashboardPage;
 

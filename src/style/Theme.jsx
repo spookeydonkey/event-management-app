@@ -1,5 +1,24 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const scrollStyles = {
+  "html, body": {
+    scrollBehavior: "smooth",
+    "::-webkit-scrollbar": {
+      width: ".5rem",
+    },
+    "::-webkit-scrollbar-track": {
+      background: "rgba(0, 0, 0, 0.1)",
+    },
+    "::-webkit-scrollbar-thumb": {
+      background: "rgba(0, 0, 0, 0.2)",
+      borderRadius: ".1rem",
+    },
+    "::-webkit-scrollbar-thumb:hover": {
+      background: "rgba(0, 0, 0, 0.3)",
+    },
+  },
+};
+
 const customTheme = extendTheme({
   colors: {
     Relaxation: "rgb(255, 255, 255)",
@@ -15,14 +34,14 @@ const customTheme = extendTheme({
   },
   components: {
     Button: {
-      baseStyle: {
-        backgroundColor: "brand.100", // Use brand.100 color for buttons
-      },
+      // baseStyle: {
+      //   backgroundColor: "brand.100", // Use brand.100 color for buttons
+      // },
     },
     Badge: {
-      baseStyle: {
-        backgroundColor: "brand.100", // Use brand.100 color for badges
-      },
+      // baseStyle: {
+      //   backgroundColor: "brand.100", // Use brand.100 color for badges
+      // },
     },
     Card: {
       baseStyle: {
@@ -43,6 +62,7 @@ const customTheme = extendTheme({
       body: {
         bg: "brand.400",
       },
+      ...scrollStyles,
     },
   },
 });

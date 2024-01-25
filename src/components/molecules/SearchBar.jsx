@@ -1,5 +1,4 @@
 import { Input } from "@chakra-ui/react";
-import { useSearch } from "@utils/EventAPI";
 
 const SearchBar = ({ value, onChange, placeholder, size, variant }) => (
   <Input
@@ -9,6 +8,7 @@ const SearchBar = ({ value, onChange, placeholder, size, variant }) => (
     placeholder={placeholder}
     value={value}
     onChange={onChange}
+    aria-label={placeholder}
   />
 );
 

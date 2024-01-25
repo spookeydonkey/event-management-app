@@ -66,18 +66,16 @@
       "endTime": "2023-03-09T07:00:00.000Z"
     },
     {
-      "title": "This is a test",
-      "description": "This is a test",
-      "date": "2024-02-01",
+      "title": "Things I'd love to do",
+      "description": "These are the things I'd love to do with the app: - Add extra labels Events: <created on> <modified on> <modified by>, have a map to openmap for the location, show random eventimages if none are provided, have an option to add events from EventBrite or similar, have a login, better responsive for the layoutshifting filter, improved a11y. ",
       "startTime": "2024-02-01T22:05",
       "endTime": "2024-02-01T23:05",
-      "location": "This is a test",
-      "categoryId": "3",
-      "createdBy": 1,
-      "image": "",
+      "location": "Utrecht",
       "categoryIds": [
         3
       ],
+      "createdBy": 1,
+      "image": "",
       "id": 5
     }
   ],

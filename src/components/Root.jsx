@@ -1,7 +1,7 @@
 // Root.jsx
 import { Outlet, useLocation } from "react-router-dom";
 import { Footer } from "@components/molecules/Footer";
-import { Box, Center } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 import ErrorBoundary from "@utils/ErrorBoundary";
 import NavBar from "@components/organisms/NavBar";
 
